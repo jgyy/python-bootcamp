@@ -1,4 +1,8 @@
-# Numbers
+"""
+30. Python Objects and Data Structures
+Assessment Test Overview
+"""
+
 # Write an equation that uses multiplication, division, an
 # exponent, addition, and subtraction that is equal to 100.25.
 print(100 + 25)
@@ -23,18 +27,18 @@ print(100 ** 0.5)
 print(100 ** 2)
 
 # Strings
-# Given the string 'hello' give an index command that returns 'e'. Enter your code in the cell below:
-s = "hello"
-print(s[1])
+# Given the string 'hello' give an index command that returns 'e'
+STRING = "hello"
+print(STRING[1])
 
 # # Print out 'e' using indexing
 # Reverse the string 'hello' using slicing:
-print(s[::-1])
+print(STRING[::-1])
 
 # # Reverse the string using slicing
 # Given the string hello, give two methods of producing the letter 'o' using indexing.
-print(s[4])
-print(s[-1])
+print(STRING[4])
+print(STRING[-1])
 
 # Lists
 # Build this list [0,0,0] two separate ways.
@@ -81,10 +85,9 @@ print(set(list5))
 print(2 > 3)
 print(3 <= 2)
 print(3 == 2.0)
-print(3.0 == 3)
 print(4 ** 0.5 != 2)
 
 # Final Question: What is the boolean output of the cell block below?
-l_one = [1,2,[3,4]]
-l_two = [1,2,{'k1':4}]
-print(l_one[2][0] >= l_two[2]['k1'])
+l_one = [1, 2, [3, 4]]
+l_two = [1, 2, {"k1": 4}]
+print(l_one[2][0] >= l_two[2]["k1"])
