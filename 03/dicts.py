@@ -1,3 +1,7 @@
+"""
+23: Dictionaries in python
+"""
+
 my_dict = {"key1": "value1", "key2": "value2"}
 print(my_dict)
 print(my_dict["key1"])
@@ -8,8 +12,8 @@ print(d["k2"][2])
 print(d["k3"]["insideKey"])
 my_list = d["key1"]
 print(my_list)
-letter = my_list[2]
-print(letter.upper())
+LETTER = my_list[2]
+print(LETTER.upper())
 print(d["key1"][2].upper())
 d = {"k1": 100, "k2": 200}
 d["k3"] = 300
