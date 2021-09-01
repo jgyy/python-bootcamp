@@ -1,9 +1,19 @@
+"""
+45: Logic with python functions
+"""
+
 def even_check(number):
+    """
+    check for even number function
+    """
     result = number % 2 == 0
     return result
 
 
 def check_even_list(num_list):
+    """
+    check for even number function
+    """
     even_numbers = []
     for number in num_list:
         if number % 2 == 0:

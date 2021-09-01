@@ -1,7 +1,8 @@
-# Use for, .split(), and if to create a Statement
-# that will print out words that start with 's':
-st = "Print only the words that"" start with s in this sentence"
-st_list = [s for s in st.split(" ") if s[0].lower() == "s"]
+"""
+39: Python statement test overview
+"""
+STRING = "Print only the words that start with s in this sentence"
+st_list = [s for s in STRING.split(" ") if s[0].lower() == "s"]
 print(st_list)
 
 # Use range() to print all the even numbers from 0 to 10.
@@ -14,8 +15,8 @@ print(list_comp)
 
 # Go through the string below and if the
 # length of a word is even print "even!"
-st = 'Print every word in this sentence that has an even number of letters'
-st_word = ["even!" if len(s) % 2 == 0 else s for s in st.split(" ")]
+STRING = 'Print every word in this sentence that has an even number of letters'
+st_word = ["even!" if len(s) % 2 == 0 else s for s in STRING.split(" ")]
 print(st_word)
 
 # Write a program that prints the integers from 1 to 100.
@@ -33,6 +34,6 @@ for i in range(1, 101):
         print(i)
 
 # Use List Comprehension to create a list of the first letters of every word in the string below:
-st = 'Create a list of the first letters of every word in this string'
-st_first = [s[0] for s in st.split(" ")]
+STRING = 'Create a list of the first letters of every word in this string'
+st_first = [s[0] for s in STRING.split(" ")]
 print(st_first)

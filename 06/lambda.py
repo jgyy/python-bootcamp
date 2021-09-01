@@ -1,15 +1,18 @@
-square = lambda num: num ** 2
-
+"""
+55: lambda expressions, map and filter functions
+"""
 
 def splicer(mystring):
+    """
+    splicer function
+    """
     if len(mystring) % 2 == 0:
         return "EVEN"
-    else:
-        return mystring[0]
+    return mystring[0]
 
 
 check_even = lambda num: num % 2 == 0
-
+square = lambda num: num ** 2
 
 my_nums = [1, 2, 3, 4, 5, 6]
 print(list(map(square, my_nums)))

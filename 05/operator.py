@@ -1,10 +1,14 @@
-from random import shuffle, randint
+"""
+37: Useful operators in python
+"""
+
+from random import randint
 
 for num in range(0, 11, 2):
     print(num)
 
-word = "abcde"
-for index, letter in enumerate(word):
+WORD = "abcde"
+for index, letter in enumerate(WORD):
     print("At index {} the letter is {}".format(index, letter))
 
 mylist1 = [1, 2, 3, 4, 5, 6]
@@ -25,9 +29,7 @@ mylist = [10, 20, 30, 40, 100, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(min(mylist))
 print(max(mylist))
 
-random_list = shuffle(mylist)
 print(mylist)
-print(type(random_list))
 print(randint(0, 100))
 output = int(input("Enter number here: "))
 print(output)

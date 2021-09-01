@@ -1,8 +1,12 @@
-list_sum = 0
+"""
+35: For loops in python
+"""
+
+LIST_SUM = 0
 mylist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for num in mylist:
-    list_sum += num
-    print(list_sum)
+    LIST_SUM += num
+    print(LIST_SUM)
 
     # Check for even
     if num % 2 == 0:
@@ -10,8 +14,8 @@ for num in mylist:
     else:
         print(f"Odd Number: {num}")
 
-mystring = "Hello World"
-for letter in mystring:
+MY_STRING = "Hello World"
+for letter in MY_STRING:
     print(letter)
 
 tup = (1, 2, 3)

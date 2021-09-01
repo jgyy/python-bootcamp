@@ -1,7 +1,11 @@
-mystring = "hello"
-mylist = [letter for letter in mystring]
+"""
+38: List comprehensions in python
+"""
+
+MYSTRING = "hello"
+mylist = list(MYSTRING)
 print(mylist)
-mylist = [letter for letter in "wordtwo"]
+mylist = list("wordtwo")
 print(mylist)
 mylist = [x ** 2 for x in range(0, 11)]
 print(mylist)

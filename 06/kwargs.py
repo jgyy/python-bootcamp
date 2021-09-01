@@ -1,4 +1,11 @@
+"""
+49: *args and **kwargs in python
+"""
+
 def myfunc(*args, **kwargs):
+    """
+    function with arguments
+    """
     if args:
         print(sum(args))
     if "fruit" in kwargs:
