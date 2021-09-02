@@ -1,9 +1,19 @@
-def display_game(game_list):
+"""
+63: Simple user interaction
+"""
+
+def display_game(game_lists):
+    """
+    display game function
+    """
     print("Here is the current list: ")
-    print(game_list)
+    print(game_lists)
 
 
 def position_choice():
+    """
+    display game function
+    """
     choice = ""
     while choice not in ("0", "1", "2"):
         choice = input("Pick a position (0,1,2): ")
@@ -12,13 +22,19 @@ def position_choice():
     return int(choice)
 
 
-def replacement_choice(game_list, position):
+def replacement_choice(game_lists, positions):
+    """
+    display game function
+    """
     user_placement = input("Type a string to place at position: ")
-    game_list[position] = user_placement
-    return game_list
+    game_lists[positions] = user_placement
+    return game_lists
 
 
 def gameon_choice():
+    """
+    display game function
+    """
     choice = ""
     while choice not in ("Y", "N"):
         choice = input("Keep Playing? (Y or N): ").upper()
@@ -28,11 +44,11 @@ def gameon_choice():
 
 
 if __name__ == "__main__":
-    game_on = True
+    GAMEON = True
     game_list = [0, 1, 2]
-    while game_on:
+    while GAMEON:
         display_game(game_list)
-        position = position_choice()
-        game_list = replacement_choice(game_list, position)
+        POSITION = position_choice()
+        game_list = replacement_choice(game_list, POSITION)
         display_game(game_list)
-        game_on = gameon_choice()
+        GAMEON = gameon_choice()

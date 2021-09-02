@@ -1,8 +1,13 @@
-from os import system
+"""
+64. First Python Milestone Project Overview
+"""
 from random import randint
 
 
 def display_board(board):
+    """
+    display board function
+    """
     # system("clear")
     display = f"""
 {board[7]} | {board[8]} | {board[9]}
@@ -23,17 +28,26 @@ def display_board(board):
 
 
 def player_input():
+    """
+    display board function
+    """
     marker = ""
     while marker not in ("X", "O"):
         marker = input("Player 1: Do you want to be X or O? ").upper()
     return ("X", "O") if marker == "X" else ("O", "X")
 
 
-def place_marker(board, marker, position):
-    board[position] = marker
+def place_marker(board, marker, pos):
+    """
+    display board function
+    """
+    board[pos] = marker
 
 
 def win_check(board, mark):
+    """
+    display board function
+    """
     return (
         (board[7] == board[8] == board[9] == mark)
         or (board[4] == board[5] == board[6] == mark)
@@ -47,14 +61,23 @@ def win_check(board, mark):
 
 
 def choose_first():
+    """
+    display board function
+    """
     return "Player 2" if randint(0, 1) == 0 else "Player 1"
 
 
-def space_check(board, position):
-    return board[position] == " "
+def space_check(board, pos):
+    """
+    display board function
+    """
+    return board[pos] == " "
 
 
 def full_board_check(board):
+    """
+    display board function
+    """
     for i in range(1, 10):
         print(space_check(board, i))
         if space_check(board, i):
@@ -63,13 +86,19 @@ def full_board_check(board):
 
 
 def player_choice(board):
-    position = 0
-    while position not in list(range(1, 10)) or not space_check(board, position):
-        position = int(input("Choose your next position (1-9): "))
-    return position
+    """
+    display board function
+    """
+    pos = 0
+    while pos not in list(range(1, 10)) or not space_check(board, pos):
+        pos = int(input("Choose your next position (1-9): "))
+    return pos
 
 
 def replay():
+    """
+    display board function
+    """
     text = "Do you want to play again? Enter Yes or No: "
     return input(text).lower().startswith("y")
 
@@ -80,42 +109,42 @@ if __name__ == "__main__":
         # Reset the board
         the_board = [" "] * 10
         player1_marker, player2_marker = player_input()
-        turn = choose_first()
-        print(turn + " will go first.")
+        TURN = choose_first()
+        print(TURN + " will go first.")
         play_game = input("Are you ready to play? Enter Yes or No.")
-        game_on = play_game.lower()[0] == "y"
-        while game_on:
-            if turn == "Player 1":
+        GAMEON = play_game.lower()[0] == "y"
+        while GAMEON:
+            if TURN == "Player 1":
                 display_board(the_board)
-                print(f"{turn} turn ({player1_marker})")
-                position = player_choice(the_board)
-                place_marker(the_board, player1_marker, position)
+                print(f"{TURN} turn ({player1_marker})")
+                POSITION = player_choice(the_board)
+                place_marker(the_board, player1_marker, POSITION)
                 if win_check(the_board, player1_marker):
                     display_board(the_board)
-                    print(f"Congratulations! {turn} have won the game!")
-                    game_on = False
+                    print(f"Congratulations! {TURN} have won the game!")
+                    GAMEON = False
                 else:
                     if full_board_check(the_board):
                         display_board(the_board)
                         print("The game is a draw!")
-                        game_on = False
+                        GAMEON = False
                     else:
-                        turn = "Player 2"
+                        TURN = "Player 2"
             else:
                 display_board(the_board)
-                print(f"{turn} turn ({player2_marker})")
-                position = player_choice(the_board)
-                place_marker(the_board, player2_marker, position)
+                print(f"{TURN} turn ({player2_marker})")
+                POSITION = player_choice(the_board)
+                place_marker(the_board, player2_marker, POSITION)
                 if win_check(the_board, player2_marker):
                     display_board(the_board)
                     print("Player 2 has won!")
-                    game_on = False
+                    GAMEON = False
                 else:
                     if full_board_check(the_board):
                         display_board(the_board)
                         print("The game is a draw!")
-                        game_on = False
+                        GAMEON = False
                     else:
-                        turn = "Player 1"
+                        TURN = "Player 1"
         if not replay():
             break

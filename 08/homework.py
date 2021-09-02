@@ -1,29 +1,52 @@
+"""
+73. Object Oriented Programming - Homework
+"""
 from math import pi
 
 
 class Line:
+    """
+    defining a class
+    """
+
     def __init__(self, coor1, coor2):
         self.coor1 = coor1
         self.coor2 = coor2
-        self.x = coor2[0] - coor1[0]
-        self.y = coor2[1] - coor1[1]
+        self.xxx = coor2[0] - coor1[0]
+        self.yyy = coor2[1] - coor1[1]
 
     def distance(self):
-        return (self.x ** 2 + self.y ** 2) ** 0.5
+        """
+        class method
+        """
+        return (self.xxx ** 2 + self.yyy ** 2) ** 0.5
 
     def slope(self):
-        return self.y / self.x
+        """
+        class method
+        """
+        return self.yyy / self.xxx
 
 
 class Cylinder:
+    """
+    defining a class
+    """
+
     def __init__(self, height=1, radius=1):
         self.height = height
         self.radius = radius
 
     def volume(self):
+        """
+        class method
+        """
         return pi * self.radius ** 2 * self.height
 
     def surface_area(self):
+        """
+        class method
+        """
         return (2 * pi * self.radius * self.height) + (2 * pi * self.radius ** 2)
 
 

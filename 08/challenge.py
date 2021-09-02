@@ -1,4 +1,11 @@
+"""
+75. Object Oriented Programming - Challenge Overview
+"""
+
 class Account:
+    """
+    Account class
+    """
     def __init__(self, owner, balance):
         self.owner = owner
         self.balance = balance
@@ -7,10 +14,16 @@ class Account:
         return f"Account owner:\t {self.owner}\nAccount balance: ${self.balance}"
 
     def deposit(self, amount):
+        """
+        class method function
+        """
         self.balance += amount
         print("Deposit Accepted")
 
     def withdraw(self, amount):
+        """
+        class method function
+        """
         if amount < self.balance:
             self.balance -= amount
             print("Withdrawal Accepted")
